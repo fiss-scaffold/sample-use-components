@@ -1,4 +1,4 @@
-# sample-amd
+# sample-use-components
 
 一个基于 fiss 的 使用component + AMD 模块化开发工程模板。
 
