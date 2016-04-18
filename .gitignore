@@ -1,0 +1,9 @@
+# npm module
+node_modules
+components
+
+# log files
+*.log
+
+#output
+output

@@ -1,0 +1,21 @@
+{
+  "name": "fiss-amd-demo",
+  "version": "0.0.3",
+  "description": "",
+  "main": "fis-conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fis-parser-node-sass-x":"*",
+    "fis3-postpackager-loader-x": "*",
+    "fis-spriter-csssprites-plus":"*",
+    "fis3-deploy-skip-packed-x":"0.0.6",
+    "fis3-deploy-ftp-x":"*",
+    "fis3-packager-wn-pack": "*",
+    "fisx-helper":"*",
+    "fiss-hook-amd":"*"
+  },
+  "author": "",
+  "license": "ISC"
+}

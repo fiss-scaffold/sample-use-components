@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <title>fiss 利用组件和amd模块化开发模版</title>
+    <link rel="stylesheet" type="text/css" href="scss/common.scss">
+    <link rel="stylesheet" type="text/css" href="scss/index.scss">
+    <link rel="stylesheet" type="text/css" href="css/foo.css">
+</head>
+
+<body>
+    <link rel="import" href="fragment/common-head.html?__inline">
+    <h1>Fiss 利用组件和amd模块化开发例子:index.html!</h1>
+    <p>O you know Angry Birds?</p>
+    <div>
+        <a href="#" class="bird-1">
+            <span class="icon"></span>
+            <span class="big">bird-1</span>
+        </a>
+    </div>
+    <div>
+        <a href="#" class="bird-2">
+            <span class="icon"></span>
+            <span class="big">bird-2</span>
+        </a>
+    </div>
+    <!-- 模块化js的loader，譬如requirejs/esl/... -->
+    <script data-loader="true" src="js/lib/esl_zepto_load.min.js"></script>
+
+     <!-- 模块化js的loader，或者是线上的url-->
+    <!-- <script data-loader="true" src="http://j2.58cdn.com.cn/olympia/js/lib/esl_zepto_load.min.js"></script> --><!--ignore-->
+
+    <script>
+        require(['pkg/main']);
+    </script>
+
+
+    <!-- 页面中引用的线上或第三方的js -->
+    <script src="http://j1.58cdn.com.cn/test/t1.js"></script>
+
+    <link rel="import" href="fragment/common-foot.html?__inline">
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <title>fiss 利用组件和amd模块化开发模版</title>
+    <link rel="stylesheet" type="text/css" href="scss/common.scss">
+    <link rel="stylesheet" type="text/css" href="scss/page1.scss">
+</head>
+<body>
+    <link rel="import" href="fragment/common-head.html?__inline">
+    <h1>Fiss 利用组件和amd模块化开发例子:page1!</h1>
+    <p>Do you know Skeeter Rabbit?</p>
+    <div>
+        <a href="#" class="rabbit-1">
+            <span class="icon"></span>
+            <span class="big">rabbit-1</span>
+        </a>
+    </div>
+
+    <div>
+        <a href="#" class="rabbit-2">
+            <span class="icon"></span>
+            <span class="big">rabbit-2</span>
+        </a>
+    </div>
+    <script data-loader="true" src="js/lib/esl_zepto_load.min.js"></script>
+    <script>
+        require(['pkg/page1']);
+    </script>
+    <link rel="import" href="fragment/common-foot.html?__inline">
+</body>
+</html>
