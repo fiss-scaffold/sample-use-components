@@ -74,7 +74,13 @@ fis.match('src/test/**', {
     useHash: false
 });
 
-fis.match('{scss|components}/(*.scss)', {
+fis.match('scss/(*.scss)', {
+    parser: fis.plugin('node-sass-x'),
+    rExt: '.css',
+    release:'/css/$1'
+});
+
+fis.match('components/(**.scss)', {
     parser: fis.plugin('node-sass-x'),
     rExt: '.css',
     release:'/css/$1'
