@@ -74,7 +74,7 @@ fis.match('src/test/**', {
     useHash: false
 });
 
-fis.match('scss/(*.scss)', {
+fis.match('{scss|components}/(*.scss)', {
     parser: fis.plugin('node-sass-x'),
     rExt: '.css',
     release:'/css/$1'
@@ -160,12 +160,28 @@ fis
 fis.match('components/**', {
     release:false
 });
+
+fis.match('(components/**).{scss|css}', {
+    release:'css/$1'
+});
+
 fis.match('(components/**).js', {
     isMod: true,
     moduleId: '$1',
     release:'js/$1'
 });
 
+fis.match('(components/**).{png|jpg|gif}', {
+    release:'img/$1'
+});
+
+fis.match('(components/**).{html|html}', {
+    release: 'fragment/$1'
+});
+
+fis.match('(components/**).{eot|otf|woff|svg|ttf}', {
+    release: 'fonts/$1'
+})
 
 // AMD模块配置详解：
 // baseUrl: 默认为. 即项目根目录,用来配置模块查找根目录
