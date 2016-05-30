@@ -1,6 +1,7 @@
 # npm module
 node_modules
 components
+**/components
 
 # log files
 *.log

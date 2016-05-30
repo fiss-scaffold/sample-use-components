@@ -1,23 +1,25 @@
 # sample-use-components
 
-一个基于 fiss 的 使用component + AMD 模块化开发工程模板。
+一个基于 fiss，使用 [fecom](https://github.com/icefox0801/fecom) + [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) 模块化开发的工程模板。
 
 ## 适用场景
-* 部分依赖的模块是通过components组件安装的
-* js采用AMD方式进行模块化开发
-* js模块想分拆打包成公共和页面等多个pkg
+* 部分依赖的模块是通过 fecom 组件管理工具进行安装的
+* js采用 AMD 方式进行模块化开发
+* js模块希望拆分打包成公共和页面等多个pkg
 
 
 ## 采用此模版的项目推荐采用如下约定
-* 把css/js/img都拆分成最小化模块开发
-* 样式用scss来开发和管理依赖
-* js采用AMD模块化管理
-* 除了外链的css和js，页面中用到的js都应该用amd方式来写代码，样式都用scss来写
+* 把 css/js/img 都拆分成最小化模块开发
+* 样式用 scss 来开发和管理依赖 （外链 css 除外）
+* js 采用 AMD 模块化管理 （外链 js 除外）
 
 
 
 
-## 安装方法
+## 模板安装方法
+
+### 安装 fiss
+
 >注意：因为部分插件不支持最新的nodejs，建议**nodejs <= 4.x**
 
 ```bash
@@ -25,16 +27,16 @@
 npm install fiss -g
 ```
 
-### init一个模版的方法
+### init 一个模版的方法
 ```bash
 
 #或通过github的名字来安装模版
-fiss init github:fiss-scaffold/sample-use-components
+fiss init sample-use-components
 
 #或者你本地自定义了一个模版，放在/localpath/myamdtpl
 fiss init /localpath/myamdtpl
 ```
-### 也可以把模版下载下来，自己安装依赖
+#### 也可以把模版下载下来，自己安装依赖
 ```bash
 # git clone之后，用npm安装，因为gfw，非常建议使用cnpm来安装，否则某些模块安装不了
 git clone https://github.com/fiss-scaffold/sample-use-components.git
@@ -48,19 +50,51 @@ cnpm intall
 ```
 
 ## 组件安装方法
-**请注意：**
->执行安装之前，先把component.json配置中的token改成你自己的token
 
+### 安装 fecom
 
 ```bash
-#把component.json里面依赖的模块安装到fis-conf.js中component.dir配置的路径，此处是src/components
-
-fiss install
+npm install -g fecom
 ```
 
+
+### 安装依赖的组件
+
+#### 指定组件安装
+
+```bash
+fecom install component-name@x.x.x
+```
+
+
+#### 安装配置的依赖
+
+修改 `component.json` 配置文件依赖配置：
+
+```json
+
+{
+	"dependencies": [
+        "component-1@x.x.x",
+        "component-2@x.x.x",
+    ]
+}
+
+```
+
+执行安装：
+
+```bash
+fecom install
+```
+
+
 ## 打包方法
+
 考虑到开发过程各阶段的需求，本模版的配置文件默认配置好了几种打包方案，分别如下：
+
 ### dev (默认打包配置)
+
 dev是默认的打包配置
 ```bash
 # 不带参数，默认用dev配置

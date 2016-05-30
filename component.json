@@ -1,13 +1,8 @@
 {
-    "protocol": "gitlab",
-    "gitlab": {
-        "token": "这里填写你的gitlab的token",
-        "domain": "http://gitlab.58corp.com/",
-        "author": "fecom-fe"
-    },
-    "dependencies": [
-        "test_comp_a@1.0.0",
-        "test_comp_b",
-        "test_comp_c@1.0.1"
-    ]
+  "dir": "./src/components/",
+  "dependencies": [
+    "fecom-fe/m-reset@1.0.0",
+    "fecom-fe/test-html@1.0.0",
+    "fecom-fe/test_comp_c@1.0.0"
+  ]
 }

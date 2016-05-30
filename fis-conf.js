@@ -1,6 +1,3 @@
-//设置component的安装路径
-fis.set('component.dir','src/components');
-
 //发布路径设置
 fis.set('release', {
     //构建结果输出的路径
